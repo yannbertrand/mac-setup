@@ -5,7 +5,6 @@ echo "# Installing some utilities"
 brew install mas
 brew install git
 brew install yarn
-brew install watchman
 brew install openssl
 brew install youtube-dl
 brew install nvm
