@@ -19,7 +19,6 @@ echo "# Installing node"
 nvm install --lts # Long-term support
 
 echo "# Installing apps from the Mac App Store"
-mas lucky "Spark - Love your email again"
 mas lucky Gifski
 mas lucky Lungo
 mas lucky "Battery Indicator"
@@ -36,13 +35,11 @@ echo "Installing homebrew cask"
 brew tap homebrew/cask
 
 echo "Installing some casks"
-brew cask install google-chrome
+brew cask install brave-browser
 brew cask install sublime-text
 brew cask install visual-studio-code
 brew cask install station
 brew cask install cleanmymac
-brew cask install jsui
-brew cask install spotify
 brew cask install vlc
 brew cask install transmission
 brew cask install molotov
