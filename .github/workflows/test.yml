@@ -1,0 +1,16 @@
+name: Test
+
+on: [push]
+
+jobs:
+  test:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run the setup.sh script
+      run: |
+        curl "https://raw.githubusercontent.com/yannbertrand/mac-setup/master/setup.sh" > setup.sh
+        source setup.sh
+        cat ~/.zshrc
