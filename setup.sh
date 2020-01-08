@@ -1,12 +1,12 @@
 echo "#----------------------------------------#"
 echo "#             Switch to ZSH              #"
 echo "#----------------------------------------#"
-chsh -s /bin/zsh
+[ "$GITHUB_ACTIONS" != true ] && chsh -s /bin/zsh
 
 echo "#----------------------------------------#"
 echo "#   Installing Apple Command Line Tools  #"
 echo "#----------------------------------------#"
-xcode-select --install
+[ "$GITHUB_ACTIONS" != true ] && xcode-select --install
 
 echo "#----------------------------------------#"
 echo "#           Installing Homebrew          #"
@@ -18,26 +18,31 @@ echo "#  Installing some utilities using Brew  #"
 echo "#----------------------------------------#"
 brew install mas
 brew install git
-brew install yarn
 brew install openssl
 brew install youtube-dl
 brew install bat
+[ "$GITHUB_ACTIONS" != true ] && brew install yarn
 brew install nvm
+
+echo "# Installing Node.js using nvm"
+[ "$GITHUB_ACTIONS" != true ] && nvm install node
 
 echo "#----------------------------------------#"
 echo "# Installing apps from the Mac App Store #"
 echo "#----------------------------------------#"
-mas lucky Gifski
-mas lucky Lungo
-mas lucky "Battery Indicator"
-mas lucky "Paste 2"
-mas lucky "Avast Passwords"
-mas lucky Shotty
-mas lucky "The Unarchiver"
-mas lucky Expressions
-mas lucky Quiver
-mas lucky "PiPifier - PiP for nearly every video"
-mas lucky Magnet
+if [ "$GITHUB_ACTIONS" != true ] ; then
+  mas lucky Gifski
+  mas lucky Lungo
+  mas lucky "Battery Indicator"
+  mas lucky "Paste 2"
+  mas lucky "Avast Passwords"
+  mas lucky Shotty
+  mas lucky "The Unarchiver"
+  mas lucky Expressions
+  mas lucky Quiver
+  mas lucky "PiPifier - PiP for nearly every video"
+  mas lucky Magnet
+fi
 
 echo "#----------------------------------------#"
 echo "#       Installing some Brew casks       #"
@@ -61,33 +66,30 @@ brew cask install iterm2
 brew cask install kap
 brew cask install colorsnapper
 
+echo "# Initialising ~/.gitignore"
+echo ".DS_Store" >> ~/.gitignore
+
+echo "# Initialising ~/.zshrc"
+cat >~/.zshrc <<EOL
+#!/bin/zsh
+
+export ZSH_CONF="default"
+export PS1="%n:%1~$ "
+
+alias cat=bat
+
+EOL
+
+echo "# Setting up your SSH key"
 if [ -z "$1" ]
   then
-    echo "#----------------------------------------#"
-    echo "#         Setting up your SSH key        #"
-    echo "#----------------------------------------#"
     echo "> What email would you like to use?"
     read email
 else
-    email=$1
+  email=$1
 fi
 
-echo "# Installing Node.js"
-nvm install node
-
-echo "# Initialising ~/.gitignore"
-echo ".DS_Store\n" >> ~/.gitignore
-
-echo "# Initialising ~/.zshrc"
-echo '#!/bin/zsh' >> ~/.zshrc
-echo '' >> ~/.zshrc
-echo 'export ZSH_CONF="default"' >> ~/.zshrc
-echo 'export PS1="%n:%1~$ "' >> ~/.zshrc
-echo '' >> ~/.zshrc
-echo 'alias cat=bat' >> ~/.zshrc
-echo '' >> ~/.zshrc
-
-echo "#----------------------------------------#"
-echo "#           Generating SSH key           #"
-echo "#----------------------------------------#"
 ssh-keygen -q -t rsa -b 4096 -C $email -f $HOME/.ssh/id_rsa -N ""
+
+echo "Copy/paste it on https://github.com/settings/ssh/new"
+cat ~/.ssh/id_rsa.pub
