@@ -4,6 +4,57 @@ echo "#----------------------------------------#"
 [ "$GITHUB_ACTIONS" != true ] && chsh -s /bin/zsh
 
 echo "#----------------------------------------#"
+echo "#         Initialising Mac config        #"
+echo "#----------------------------------------#" 
+# See https://www.defaults-write.com
+
+echo "Disable Gatekeeper"
+[ "$GITHUB_ACTIONS" != true ] && defaults write /Library/Preferences/com.apple.security GKAutoRearm -bool false
+
+echo "Enable Safari debug menu"
+defaults write com.apple.Safari IncludeInternalDebugMenu 1
+
+echo "Disable Dashboard"
+defaults write com.apple.dashboard mcx-disabled -boolean true
+
+echo "Disable ‘Stay on front’ for help windows"
+defaults write com.apple.helpviewer DevMode -bool true
+
+echo "Disable the creation of .DS_Store files"
+defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+
+echo "# Dock"
+echo " Remove the Auto-Hide & Show Delay"
+defaults write com.apple.Dock autohide-delay -float 0
+echo " Decrease the Mission Control zoom effect in Mac OS X"
+defaults write com.apple.dock expose-animation-duration -float 0.12
+echo " Relaunch"
+killall Dock
+
+echo "# Finder"
+echo " Display the file extensions"
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+echo " Display full posix path title Bar"
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+echo " Change default view style to Column View"
+defaults write com.apple.Finder FXPreferredViewStyle clmv
+echo " Display folders before files"
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
+echo " Relaunch"
+killall Finder
+
+echo "# Screenshots"
+mkdir ~/Pictures/Screenshots
+echo " Disable screenshot shadows on a Mac"
+defaults write com.apple.screencapture disable-shadow -bool true
+echo " Remove the date and timestamp from Screenshots"
+defaults write com.apple.screencapture include-date -bool false
+echo " Change the default location for screenshots to ~/Pictures/Screenshots"
+defaults write com.apple.screencapture location ~/Pictures/Screenshots
+echo " Relaunch SystemUIServer"
+killall SystemUIServer
+
+echo "#----------------------------------------#"
 echo "#   Installing Apple Command Line Tools  #"
 echo "#----------------------------------------#"
 [ "$GITHUB_ACTIONS" != true ] && xcode-select --install
