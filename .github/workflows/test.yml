@@ -12,5 +12,7 @@ jobs:
     - name: Run the setup.sh script
       run: |
         curl "https://raw.githubusercontent.com/yannbertrand/mac-setup/master/setup.sh" > setup.sh
+        clear
+        whoami
         source setup.sh
         cat ~/.zshrc
