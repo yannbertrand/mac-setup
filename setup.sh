@@ -101,7 +101,7 @@ brew cask install docker
 brew cask install brave-browser      # See https://brave.com/
 brew cask install sublime-text       # See https://sublimetext.com/
 brew cask install visual-studio-code # See https://code.visualstudio.com/
-brew cask install station            # See https://getstation.com/
+brew cask install ferdi              # See https://getferdi.com/
 brew cask install cleanmymac         # See https://macpaw.com/cleanmymac
 brew cask install disk-inventory-x   # See http://www.derlien.com/
 brew cask install vlc                # See https://videolan.org/vlc/
