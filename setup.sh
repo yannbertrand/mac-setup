@@ -91,7 +91,6 @@ if [ "$GITHUB_ACTIONS" != true ] ; then
   mas lucky "The Unarchiver"    # See https://macpaw.com/the-unarchiver
   mas lucky Expressions         # See https://www.apptorium.com/expressions
   mas lucky Quiver              # See http://happenapps.com/#quiver
-  mas lucky Magnet              # See https://magnet.crowdcafe.com/
   mas lucky "PiPifier - PiP for nearly every video" # See https://github.com/arnoappenzeller/PiPifier
 fi
 
@@ -109,6 +108,7 @@ brew cask install vlc                # See https://videolan.org/vlc/
 brew cask install transmission       # See https://transmissionbt.com/
 brew cask install molotov            # See https://www.molotov.tv/
 brew cask install cyberduck          # See https://cyberduck.io/
+brew cask install rectangle          # See https://rectangleapp.com
 brew cask install bartender          # See https://www.macbartender.com/
 brew cask install protonmail-bridge  # See https://protonmail.com/bridge/
 brew cask install protonvpn          # See https://protonvpn.com/
