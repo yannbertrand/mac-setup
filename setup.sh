@@ -84,10 +84,7 @@ echo "#----------------------------------------#"
 if [ "$GITHUB_ACTIONS" != true ] ; then
   mas lucky Gifski              # See https://sindresorhus.com/gifski
   mas lucky Lungo               # See https://sindresorhus.com/lungo
-  mas lucky "Battery Indicator" # See https://sindresorhus.com/battery-indicator
-  mas lucky "Paste 2"           # See https://pasteapp.me/
   mas lucky "Avast Passwords"   # See https://avast.com/passwords
-  mas lucky Shotty              # See https://jacobruiz.com/shotty
   mas lucky "The Unarchiver"    # See https://macpaw.com/the-unarchiver
   mas lucky Expressions         # See https://www.apptorium.com/expressions
   mas lucky Quiver              # See http://happenapps.com/#quiver
@@ -98,7 +95,6 @@ echo "#----------------------------------------#"
 echo "#       Installing some Brew casks       #"
 echo "#----------------------------------------#"
 brew cask install docker
-brew cask install brave-browser      # See https://brave.com/
 brew cask install sublime-text       # See https://sublimetext.com/
 brew cask install visual-studio-code # See https://code.visualstudio.com/
 brew cask install ferdi              # See https://getferdi.com/
@@ -115,7 +111,6 @@ brew cask install protonvpn          # See https://protonvpn.com/
 brew cask install handbrake          # See https://handbrake.fr/
 brew cask install gitkraken          # See https://www.gitkraken.com/
 brew cask install iterm2             # See https://iterm2.com/
-brew cask install kap                # See https://getkap.co/
 brew cask install colorsnapper       # See https://colorsnapper.com/
 brew cask install aerial             # See https://github.com/JohnCoates/Aerial
 
