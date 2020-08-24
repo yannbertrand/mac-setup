@@ -88,6 +88,7 @@ if [ "$GITHUB_ACTIONS" != true ] ; then
   mas lucky "The Unarchiver"    # See https://macpaw.com/the-unarchiver
   mas lucky Expressions         # See https://www.apptorium.com/expressions
   mas lucky Quiver              # See http://happenapps.com/#quiver
+  mas lucky colorslurp          # See https://colorslurp.com/
   mas lucky "PiPifier - PiP for nearly every video" # See https://github.com/arnoappenzeller/PiPifier
 fi
 
@@ -111,7 +112,6 @@ brew cask install protonvpn          # See https://protonvpn.com/
 brew cask install handbrake          # See https://handbrake.fr/
 brew cask install gitkraken          # See https://www.gitkraken.com/
 brew cask install iterm2             # See https://iterm2.com/
-brew cask install colorsnapper       # See https://colorsnapper.com/
 brew cask install aerial             # See https://github.com/JohnCoates/Aerial
 
 echo "#----------------------------------------#"
