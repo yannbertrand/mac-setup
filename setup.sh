@@ -118,6 +118,9 @@ echo "#----------------------------------------#"
 echo "#         Initialising dev stuff         #"
 echo "#----------------------------------------#"
 
+echo "# Creating Developer folder"
+mkdir -p ~/Developer
+
 echo "# Initialising ~/.gitignore"
 echo ".DS_Store" >> ~/.gitignore
 
