@@ -73,10 +73,11 @@ brew install openssl
 brew install mas        # See https://github.com/mas-cli/mas
 brew install youtube-dl # See https://github.com/ytdl-org/youtube-dl
 brew install bat        # See https://github.com/sharkdp/bat
-brew install nvm        # See https://github.com/creationix/nvm
+brew install asdf       # See https://github.com/asdf-vm/asdf
 
-echo "# Installing Node.js using nvm"
-[ "$GITHUB_ACTIONS" != true ] && nvm install node
+echo "# Installing Node.js using asdf"
+[ "$GITHUB_ACTIONS" != true ] && asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+[ "$GITHUB_ACTIONS" != true ] && echo "legacy_version_file = yes" > ~/.asdfrc
 
 echo "#----------------------------------------#"
 echo "# Installing apps from the Mac App Store #"
