@@ -96,24 +96,24 @@ fi
 echo "#----------------------------------------#"
 echo "#       Installing some Brew casks       #"
 echo "#----------------------------------------#"
-brew cask install docker
-brew cask install sublime-text       # See https://sublimetext.com/
-brew cask install visual-studio-code # See https://code.visualstudio.com/
-brew cask install ferdi              # See https://getferdi.com/
-brew cask install cleanmymac         # See https://macpaw.com/cleanmymac
-brew cask install disk-inventory-x   # See http://www.derlien.com/
-brew cask install vlc                # See https://videolan.org/vlc/
-brew cask install transmission       # See https://transmissionbt.com/
-brew cask install molotov            # See https://www.molotov.tv/
-brew cask install cyberduck          # See https://cyberduck.io/
-brew cask install rectangle          # See https://rectangleapp.com
-brew cask install bartender          # See https://www.macbartender.com/
-brew cask install protonmail-bridge  # See https://protonmail.com/bridge/
-brew cask install protonvpn          # See https://protonvpn.com/
-brew cask install handbrake          # See https://handbrake.fr/
-brew cask install gitkraken          # See https://www.gitkraken.com/
-brew cask install iterm2             # See https://iterm2.com/
-brew cask install aerial             # See https://github.com/JohnCoates/Aerial
+brew install docker
+brew install sublime-text       # See https://sublimetext.com/
+brew install visual-studio-code # See https://code.visualstudio.com/
+brew install ferdi              # See https://getferdi.com/
+brew install cleanmymac         # See https://macpaw.com/cleanmymac
+brew install disk-inventory-x   # See http://www.derlien.com/
+brew install vlc                # See https://videolan.org/vlc/
+brew install transmission       # See https://transmissionbt.com/
+brew install molotov            # See https://www.molotov.tv/
+brew install cyberduck          # See https://cyberduck.io/
+brew install rectangle          # See https://rectangleapp.com
+brew install bartender          # See https://www.macbartender.com/
+brew install protonmail-bridge  # See https://protonmail.com/bridge/
+brew install protonvpn          # See https://protonvpn.com/
+brew install handbrake          # See https://handbrake.fr/
+brew install gitkraken          # See https://www.gitkraken.com/
+brew install iterm2             # See https://iterm2.com/
+brew install aerial             # See https://github.com/JohnCoates/Aerial
 
 echo "#----------------------------------------#"
 echo "#         Initialising dev stuff         #"
