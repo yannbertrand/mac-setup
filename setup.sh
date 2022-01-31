@@ -114,6 +114,7 @@ brew install handbrake          # See https://handbrake.fr/
 brew install gitkraken          # See https://www.gitkraken.com/
 brew install iterm2             # See https://iterm2.com/
 brew install aerial             # See https://github.com/JohnCoates/Aerial
+brew install monitorcontrol     # See https://github.com/MonitorControl/MonitorControl
 
 echo "#----------------------------------------#"
 echo "#         Initialising dev stuff         #"
