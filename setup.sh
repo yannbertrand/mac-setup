@@ -19,6 +19,8 @@ echo "Disable the creation of .DS_Store files"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 
 echo "# Dock"
+echo " Autohide the Dock"
+defaults write com.apple.dock "autohide" -bool "true"
 echo " Remove the Auto-Hide & Show Delay"
 defaults write com.apple.Dock autohide-delay -float 0
 echo " Decrease the Mission Control zoom effect in Mac OS X"
