@@ -19,6 +19,8 @@ echo "Disable the creation of .DS_Store files"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 
 echo "# Dock"
+echo " Sets the Dock to the left"
+defaults write com.apple.dock "orientation" -string "left"
 echo " Autohide the Dock"
 defaults write com.apple.dock "autohide" -bool "true"
 echo " Remove the Auto-Hide & Show Delay"
