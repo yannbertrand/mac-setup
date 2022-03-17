@@ -1,9 +1,4 @@
 echo "#----------------------------------------#"
-echo "#             Switch to ZSH              #"
-echo "#----------------------------------------#"
-[ "$GITHUB_ACTIONS" != true ] && chsh -s /bin/zsh
-
-echo "#----------------------------------------#"
 echo "#         Initialising Mac config        #"
 echo "#----------------------------------------#" 
 # See https://www.defaults-write.com
