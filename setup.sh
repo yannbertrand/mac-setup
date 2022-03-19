@@ -59,6 +59,11 @@ echo "#----------------------------------------#"
 [ "$GITHUB_ACTIONS" != true ] && xcode-select --install
 
 echo "#----------------------------------------#"
+echo "#          Installing Oh My Zsh          #"
+echo "#----------------------------------------#"
+/bin/sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+echo "#----------------------------------------#"
 echo "#           Installing Homebrew          #"
 echo "#----------------------------------------#"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" # See https://brew.sh/
