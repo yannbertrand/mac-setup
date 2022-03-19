@@ -61,7 +61,7 @@ echo "#----------------------------------------#"
 echo "#----------------------------------------#"
 echo "#           Installing Homebrew          #"
 echo "#----------------------------------------#"
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" # See https://brew.sh/
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" # See https://brew.sh/
 
 echo "#----------------------------------------#"
 echo "#  Installing some utilities using Brew  #"
