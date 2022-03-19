@@ -72,8 +72,6 @@ echo "#----------------------------------------#"
 echo "#  Installing some utilities using Brew  #"
 echo "#----------------------------------------#"
 [ "$GITHUB_ACTIONS" != true ] && brew install yarn
-brew install git
-brew install openssl
 brew install mas        # See https://github.com/mas-cli/mas
 brew install youtube-dl # See https://github.com/ytdl-org/youtube-dl
 brew install bat        # See https://github.com/sharkdp/bat
