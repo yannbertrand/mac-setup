@@ -27,6 +27,8 @@ echo " Remove the Auto-Hide & Show Delay"
 defaults write com.apple.Dock autohide-delay -float 0
 echo " Decrease the Mission Control zoom effect in Mac OS X"
 defaults write com.apple.dock expose-animation-duration -float 0.12
+echo " Keep the Spaces arrangement"
+defaults write com.apple.dock "mru-spaces" -bool "false"
 echo " Relaunch"
 killall Dock
 
