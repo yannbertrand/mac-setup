@@ -6,8 +6,6 @@ echo "#----------------------------------------#"
 echo "Disable Gatekeeper"
 [ "$GITHUB_ACTIONS" != true ] && defaults write /Library/Preferences/com.apple.security GKAutoRearm -bool false
 
-echo "Enable Safari debug menu"
-defaults write com.apple.Safari IncludeInternalDebugMenu 1
 
 echo "Disable Dashboard"
 defaults write com.apple.dashboard mcx-disabled -boolean true
@@ -17,6 +15,11 @@ defaults write com.apple.helpviewer DevMode -bool true
 
 echo "Disable the creation of .DS_Store files"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+
+echo "# Safari"
+echo " Enable Safari debug menu"
+defaults write com.apple.Safari IncludeInternalDebugMenu 1
+defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
 
 echo "# Dock"
 echo " Sets the Dock to the left"
