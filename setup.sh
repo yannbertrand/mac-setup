@@ -6,7 +6,6 @@ echo "#----------------------------------------#"
 echo "Disable Gatekeeper"
 [ "$GITHUB_ACTIONS" != true ] && defaults write /Library/Preferences/com.apple.security GKAutoRearm -bool false
 
-
 echo "Disable Dashboard"
 defaults write com.apple.dashboard mcx-disabled -boolean true
 
@@ -15,6 +14,18 @@ defaults write com.apple.helpviewer DevMode -bool true
 
 echo "Disable the creation of .DS_Store files"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+
+echo "# Trackpad"
+echo " Tap to click"
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -bool true
+echo " Set tracking speed"
+defaults write NSGlobalDomain com.apple.trackpad.scaling -float 3
+echo " Remove Force Click and haptic feedback"
+defaults write com.apple.AppleMultitouchTrackpad ActuateDetents -bool true
+defaults write com.apple.AppleMultitouchTrackpad ForceSuppressed -bool false
+echo " Use four fingers to swipe up to open Mission Control & swip down to open App Exposé"
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerVertSwipeGesture -int 0
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerVertSwipeGesture -int 0
 
 echo "# Safari"
 echo " Enable Safari debug menu"
