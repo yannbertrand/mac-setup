@@ -167,7 +167,7 @@ else
   email=$1
 fi
 
-ssh-keygen -q -t rsa -b 4096 -C $email -f $HOME/.ssh/id_rsa -N ""
+ssh-keygen -t ed25519 -C $email -f $HOME/.ssh/id_rsa -N ""
 
 echo "Copy/paste it on https://github.com/settings/ssh/new"
 cat ~/.ssh/id_rsa.pub
