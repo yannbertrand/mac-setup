@@ -116,7 +116,6 @@ echo "#----------------------------------------#"
 echo "#       Installing some Brew casks       #"
 echo "#----------------------------------------#"
 brew install docker
-brew install sublime-text       # See https://sublimetext.com/
 brew install visual-studio-code # See https://code.visualstudio.com/
 brew install ferdi              # See https://getferdi.com/
 brew install cleanmymac         # See https://macpaw.com/cleanmymac
