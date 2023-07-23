@@ -117,7 +117,7 @@ echo "#       Installing some Brew casks       #"
 echo "#----------------------------------------#"
 brew install docker
 brew install visual-studio-code # See https://code.visualstudio.com/
-brew install ferdi              # See https://getferdi.com/
+brew install ferdium            # See https://ferdium.org/
 brew install cleanmymac         # See https://macpaw.com/cleanmymac
 brew install disk-inventory-x   # See http://www.derlien.com/
 brew install vlc                # See https://videolan.org/vlc/
