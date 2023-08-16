@@ -70,6 +70,11 @@ defaults write com.apple.screencapture location ~/Pictures/Screenshots
 echo " Relaunch SystemUIServer"
 killall SystemUIServer
 
+echo '# Mission control'
+echo " Group apps"
+defaults write com.apple.dock "expose-group-apps" -bool "true"
+killall Dock
+
 echo "#----------------------------------------#"
 echo "#   Installing Apple Command Line Tools  #"
 echo "#----------------------------------------#"
